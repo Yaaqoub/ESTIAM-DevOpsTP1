@@ -17,9 +17,13 @@ models.sequelize.authenticate().then(() => {
   //Create Database Models
   models.sequelize.sync({
     force: true
-  })
-      .then(() => {})
-      .catch((err) => {
+  }).then(() => {
+
+    models.main.create({
+      theAnchor: 'heavy',
+      counter: 0
+    });
+  }).catch((err) => {
     throw new Error(err);
   });
 

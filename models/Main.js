@@ -8,8 +8,13 @@ module.exports = function(sequelize, Sequelize) {
             primaryKey: true
         },
 
-        counter: {
+        theAnchor: {
             type: Sequelize.STRING,
+            notEmpty: true
+        },
+
+        counter: {
+            type: Sequelize.INTEGER,
             notEmpty: true
         }
     },{
