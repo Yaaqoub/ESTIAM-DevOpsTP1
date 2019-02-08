@@ -5,6 +5,32 @@ let createError = require('http-errors'),
     env = require('dotenv').load(),
     logger = require('morgan');
 
+
+
+//Exported models
+let models = require("./models");
+
+
+// Check Database connection
+models.sequelize.authenticate().then(() => {
+
+  //Create Database Models
+  models.sequelize.sync({
+    force: true
+  })
+      .then(() => {})
+      .catch((err) => {
+    throw new Error(err);
+  });
+
+}).catch(err => {
+  console.error(err);
+  process.exit(1);
+});
+
+
+
+
 let app = express();
 
 // view engine setup
