@@ -3,7 +3,7 @@
 ## Running the project
 
 ```
-~$ git clone git@github.com:Yaaqoub/ESTIAM-DevOpsTP1.git
+~$ git clone https://github.com/Yaaqoub/ESTIAM-DevOpsTP1.git
 ~$ docker image build -t devopstp1 .
 ~$ docker container run --rm -p 8080:80 devopstp1
 ```
