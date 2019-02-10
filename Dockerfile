@@ -22,7 +22,7 @@ RUN cd /src;npm install
 
 RUN chmod +x /src/installer.sh && chown 700 /src/installer.sh
 
-EXPOSE 3000
+EXPOSE 80
 
 ENTRYPOINT ["/src/installer.sh"]
 #CMD sudo ./installer.sh
